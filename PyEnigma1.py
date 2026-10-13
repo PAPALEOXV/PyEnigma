@@ -9,17 +9,19 @@ with open(name1,mode='rb')as file:
     data1=file.read()
 for byte1 in data1:
     if byte1>125:
-        byte1-=5
+        byte1-=6
     elif byte1>96:
-        byte1-=2
+        byte1-=3
+    elif byte1>63:
+        byte1-=1
     byte1-=32
     byte1+=byte0
-    while byte1>89:
-        byte1-=90
+    while byte1>88:
+        byte1-=89
     byte2=data0[byte1]
     byte0+=1
-    while byte0>89:
-        byte0-=90
+    while byte0>88:
+        byte0-=89
     data2.append(byte2)
 print(len(data2))
 with open(name2,mode='wb')as file:

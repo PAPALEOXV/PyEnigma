@@ -1,13 +1,11 @@
 byte0=int(input())
 byte1=int(input())
-name0=input()
-name1=input()
 name2=input()
 name4=input()
 data4=[]
-with open('PyEnigma'+name0,mode='rb')as file:
+with open('PyEnigma1',mode='rb')as file:
     data0=file.read()
-with open('PyEnigma'+name1,mode='rb')as file:
+with open('PyEnigma3',mode='rb')as file:
     data1=file.read()
 with open(name2,mode='rb')as file:
     data2=file.read()

@@ -14,20 +14,20 @@ for byte2 in data2:
         byte2-=7
     elif byte2>96:
         byte2-=4
-    elif byte2>63:
+    elif byte2>64:
         byte2-=2
-    elif byte2>36:
+    elif byte2>37:
         byte2-=1
     byte2-=32
     byte3=data0[byte2]
-    if byte3>125:
-        byte3-=7
-    elif byte3>96:
-        byte3-=4
-    elif byte3>63:
-        byte3-=2
-    elif byte3>36:
-        byte3-=1
+    if byte2>125:
+        byte2-=7
+    elif byte2>96:
+        byte2-=4
+    elif byte2>64:
+        byte2-=2
+    elif byte2>37:
+        byte2-=1
     byte3-=byte0
     while byte3<32:
         byte3+=88
@@ -36,14 +36,14 @@ for byte2 in data2:
         byte0-=88
     byte3-=32
     byte4=data1[byte3]
-    if byte4>125:
-        byte4-=7
-    elif byte4>96:
-        byte4-=4
-    elif byte4>63:
-        byte4-=2
-    elif byte4>36:
-        byte4-=1
+    if byte2>125:
+        byte2-=7
+    elif byte2>96:
+        byte2-=4
+    elif byte2>64:
+        byte2-=2
+    elif byte2>37:
+        byte2-=1
     byte4-=byte1
     while byte4<32:
         byte4+=88
@@ -54,9 +54,9 @@ for byte2 in data2:
         byte4+=7
     elif byte4>92:
         byte4+=4
-    elif byte4>61:
+    elif byte4>62:
         byte4+=2
-    elif byte4>35:
+    elif byte4>36:
         byte4+=1
     data4.append(byte4)
 with open(name4,mode='wb')as file:

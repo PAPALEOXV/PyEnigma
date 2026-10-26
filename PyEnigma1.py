@@ -14,9 +14,9 @@ for byte2 in data2:
         byte2-=7
     elif byte2>96:
         byte2-=4
-    elif byte2>63:
+    elif byte2>64:
         byte2-=2
-    elif byte2>36:
+    elif byte2>37:
         byte2-=1
     byte2-=32
     byte2+=byte0
@@ -26,14 +26,14 @@ for byte2 in data2:
     byte0+=1
     while byte0>87:
         byte0-=88
-    if byte3>125:
-        byte3-=7
-    elif byte3>96:
-        byte3-=4
-    elif byte3>63:
-        byte3-=2
-    elif byte3>36:
-        byte3-=1
+    if byte2>125:
+        byte2-=7
+    elif byte2>96:
+        byte2-=4
+    elif byte2>64:
+        byte2-=2
+    elif byte2>37:
+        byte2-=1
     byte3-=32
     byte3+=byte1
     while byte3>87:

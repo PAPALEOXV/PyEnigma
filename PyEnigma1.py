@@ -1,13 +1,14 @@
 byte0=int(input())
-name2=input()
-name3=input()
+file0=open('PyEnigma0','rb')
+data0=file0.read()
+file0.close()
+file1=open('PyEnigma1','rb')
+data1=file1.read()
+file1.close()
+file2=open(input(),'rb')
+data2=file2.read()
+file2.close()
 data3=[]
-with open('PyEnigma0',mode='rb')as file:
-    data0=file.read()
-with open('PyEnigma1',mode='rb')as file:
-    data1=file.read()
-with open(name2,mode='rb')as file:
-    data2=file.read()
 for byte2 in data2:
     if byte2>125:
         byte2-=7
@@ -26,5 +27,6 @@ for byte2 in data2:
     while byte0>87:
         byte0-=88
     data3.append(byte3)
-with open(name3,mode='wb')as file:
-    file.write(bytes(data3))
+file3=open(input(),'wb')
+file3.write(bytes(data3))
+file3.close()

@@ -1,2 +1,2 @@
 # PyEnigma
-Educational and casual use only. Bytes can only be printable ASCII except #@_`{|}~
+Do not use in production! Bytes can only be printable ASCII except #@_`{|}~

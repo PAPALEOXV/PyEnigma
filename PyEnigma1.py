@@ -10,20 +10,20 @@ data2=file2.read()
 file2.close()
 data3=[]
 for byte2 in data2:
-    if byte2>125:
-        byte2-=6
-    elif byte2>96:
-        byte2-=3
+    if byte2>96:
+        byte2-=4
     elif byte2>64:
+        byte2-=2
+    elif byte2>35:
         byte2-=1
     byte2-=32
     byte2+=data0[byte0]
-    while byte2>88:
-        byte2-=89
+    while byte2>86:
+        byte2-=87
     byte3=data1[byte2]
     byte0+=1
-    while byte0>88:
-        byte0-=89
+    while byte0>86:
+        byte0-=87
     data3.append(byte3)
 file3=open(input(),'wb')
 file3.write(bytes(data3))
